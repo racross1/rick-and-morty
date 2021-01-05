@@ -1,0 +1,25 @@
+<h1> Make a new Morty </h1> 
+
+<% if flash[:errors] %> 
+    <% flash[:errors].each do |error| %>
+        <p> <%= error %> </p>
+    <% end %>
+<% end %>
+
+<%= form_with model: @morty do |f| %> 
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :attitude %>
+    <%= f.text_field :attitude %><br>
+
+    <%= f.label :species %>
+    <%= f.text_field :species %><br>
+    <br>
+    <%= f.submit %>
+<% end %>
+
+<br>
+<%=link_to "All Morty's", morties_path %>
+<br>
+<%=link_to "Home", '/' %>
