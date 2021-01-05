@@ -5,4 +5,7 @@ class Quest < ApplicationRecord
   belongs_to :adventure
   has_many :quest_items
   has_many :items, through: :quest_items
+
+  validates :items, length: { maximum: 3 }
+
 end

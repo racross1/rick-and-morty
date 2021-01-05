@@ -1,0 +1,16 @@
+<h3>Create a Quest!! </h3>
+<%= form_with model: @quest do |f| %>
+    <%= f.label :rick%>
+    <%= f.collection_select :rick_id, @ricks, :id, :name %><br><br>
+
+    <%= f.label :morty%>
+    <%= f.collection_select :morty_id, @morties, :id, :name %><br><br>
+
+    <%= f.label :adventure%>
+    <%= f.collection_select :adventure_id, @adventures, :id, :location %><br><br>
+
+    <%= f.label :item%> (limit 3)
+    <%= f.collection_check_boxes :item_ids, @items, :id, :name, include_hidden:false %><br><br>
+
+    <%= f.submit %>
+<% end %>

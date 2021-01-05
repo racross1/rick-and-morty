@@ -1,0 +1,12 @@
+<h3> Your quest </h3>
+
+Rick: <%= @quest.rick.name%><br>
+Morty: <%= @quest.morty.name%><br>
+Adventure Name: <%= @quest.adventure.name%><br>
+Adventure Location: <%= @quest.adventure.location %><br>
+Adventure Description: <%= @quest.adventure.description %><br>
+Outcome: <% if @quest.success %>
+                <%= @quest.adventure.pass %>
+            <% else %> 
+                <%= @quest.adventure.fail%>
+            <% end %><br><br>
