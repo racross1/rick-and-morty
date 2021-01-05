@@ -1,0 +1,11 @@
+<h3>Create your own Items!!</h3>
+
+<%= form_for @item do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+
+    <%= f.label :success_rate %>
+    <%= f.text_field :success_rate%><br><br>
+
+    <%= f.submit %>
+<% end %>

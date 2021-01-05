@@ -1,0 +1,19 @@
+<h3>Create your own Adventure!! </h3>
+
+<%= form_for @adventure do |f| %>
+    <%= f.label :location %>
+    <%= f.text_field :location%><br><br>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %><br><br>
+
+    <%= f.label :pass %>
+    <%= f.text_field :pass %><br><br>
+
+    <%= f.label :fail %>
+    <%= f.text_field :fail %><br><br>
+
+    <%= f.collection_select :item_id, @items, :id, :name%><br><br>
+
+    <%= f.submit%>
+<% end %>
