@@ -1,0 +1,12 @@
+<h2> Hi Login! </h1>
+<%= form_for :log_in, url: login_index_path do |f|%>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit %>
+
+
+<% end %>

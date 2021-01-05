@@ -1,0 +1,4 @@
+class QuestItem < ApplicationRecord
+  belongs_to :item
+  belongs_to :quest
+end
