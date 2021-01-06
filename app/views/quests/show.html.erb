@@ -1,20 +1,17 @@
-<h3> Your quest </h3>
-
-Rick: <%= @quest.rick.name%><br>
-Morty: <%= @quest.morty.name%><br>
+<h3> Your Quest </h3>
+<br>
 Adventure Name: <%= @quest.adventure.name%><br>
 Adventure Location: <%= @quest.adventure.location %><br>
-Adventure Description: <%= @quest.adventure.description %><br>
-Outcome: <% if @quest.success %>
-                <%= @quest.adventure.pass %>
-            <% else %> 
-                <%= @quest.adventure.fail%>
-            <% end %><br><br>
+Adventure Description: <%= @quest.adventure.description %><br><br>
+Rick: <%= @quest.rick.name%><br>
+Morty: <%= @quest.morty.name%><br>
+
 Rick Alive? <%= @quest.rick_alive %><br>
-Morty Alive? <%= @quest.morty_alive %><br>
-Quest Score: <%= @quest.quest_total %><br>
+Morty Alive? <%= @quest.morty_alive %><br><br>
+Quest Score: <%= @quest.quest_total %><br><br>
         <%if @quest.user_id == session[:user_id]%>
         Items: <ul><% @quest.items.each do |i| %>
                 <li><%= i.name %></li>
-            <% end %></ul><br>
+            <% end %></ul><br><br>
         <% end %>
+<h4 style="color:red;">Outcome: <%=@quest.outcome_message%></h4>

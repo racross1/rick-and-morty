@@ -1,8 +1,9 @@
 class QuestsController < ApplicationController
     
     def index
-        @user_quests = User.find(session[:user_id]).quests
-        @quests = Quest.correct_order
+        @user_quests = User.find(session[:user_id]).quests.reverse
+        @quests = Quest.all
+        
 
     end
     

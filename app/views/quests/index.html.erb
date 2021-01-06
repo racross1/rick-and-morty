@@ -1,31 +1,25 @@
-<h3>Your quests: </h3>
+<h3>Your Quests: </h3>
 <% @user_quests.each do |q|%>
-    Rick: <%= q.rick.name%><br>
-    Morty: <%= q.morty.name%><br>
     Adventure Name: <%= link_to q.adventure.name, q %><br>
     Adventure Location: <%= q.adventure.location %><br>
     Adventure Description: <%= q.adventure.description %><br>
-    Outcome: <% if q.success %>
-                <%= q.adventure.pass %>
-            <% else %> 
-                <%= q.adventure.fail%>
-            <% end %><br>
-    Rick Alive? <%= q.rick_alive %><br>
-    Morty Alive? <%= q.morty_alive %><br>
+    Rick: <%= q.rick.name%><br>
+    Morty: <%= q.morty.name%><br>
     Quest Score: <%= q.quest_total %><br>
     Items: <ul><% q.items.each do |i| %>
                 <li><%= i.name %></li>
-            <% end %></ul><br>
+            <% end %></ul>
+   <strong style="color:red;">Outcome: <%= q.outcome_message %></strong><br><br><br>
 <% end %>
 
 <h3> All quests: </h3>
 
 <% @quests.each do |q|%>
-    Rick: <%= q.rick.name%><br>
-    Morty: <%= q.morty.name%><br>
     Adventure Name: <%= link_to q.adventure.name, q %><br>
     Adventure Location: <%= q.adventure.location %><br>
     Adventure Description: <%= q.adventure.description %><br>
+    Rick: <%= q.rick.name%><br>
+    Morty: <%= q.morty.name%><br>
     Outcome: <% if q.success %>
                 <%= q.adventure.pass %>
             <% else %> 

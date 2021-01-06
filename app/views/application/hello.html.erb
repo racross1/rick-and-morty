@@ -1,22 +1,17 @@
-<% if session[:user_id] == nil %>
-<h3> Login or Create New User </h3>
-
-<%= link_to "login", new_login_path %>
-  
+<h1> Welcome to Rick and Morty Quests!</h1>
 <br>
-<%= link_to "Create New User", new_user_path%>
-  
-
-<% else %>
-
-<h3> [insert all user options] </h3>
-
+<h3>The best place for seeking Rick and Morty Adventures</h3>
 <br>
-<%=link_to "Create a new Rick", new_rick_path %>
+<h4>Features:</h4>
+<ul>
+<li>Create an account</li>
+<li>Go on a quest</li>
+<li>Check your quest analytics</li>
+<li>Check all quest analytics</li>
+<li>Create a Rick</li>
+<li>Create a Morty</li>
+<li>Create an adventure</li>
+<li>Create an item</li>
+</ul>
 <br>
-<%=link_to "Create a new Morty", new_morty_path %>
-
-
-
-<% end %>
-
+<h3> Have fun and don't forget to survive broh!</h3>

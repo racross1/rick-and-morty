@@ -122,9 +122,38 @@ class Quest < ApplicationRecord
     Quest.all.map{|q| q.morty} 
   end
 
-  def self.correct_order
-    Quest.order("created_at ASC")
+ def outcome_message
+  message = ""
+
+  if self.success
+    message += "Good news, broh: your quest was successful!"
+  else 
+    message += "Bad news, broh: you failed the quest."
   end 
+
+  if self.rick_alive
+    message += " At least your Rick is still alive."
+  else 
+    message += " Your Rick is dead - What were you thinking broh??!"
+  end 
+
+  if self.morty_alive 
+    message += " Good and bad news: Morty is still alive. "
+  else
+    message += " Your Morty died, but it's ok, he was useless anyway. "
+  end 
+
+  if self.success
+    message += self.adventure.pass
+  else 
+    message += self.adventure.fail 
+  end 
+
+  message
+
+end 
+
+
 
 
 

@@ -24,13 +24,15 @@ Things you may want to cover:
 * ...
 
 To Do
-- Logout functionality
-- Sort Quest index page by most recent
-- More analytics
-- User analytics message (string) 
+- update formatting on analytics page
 
 Later
 - Seed thoughtfully
+- Try to break it / debug
+
+Stretch
+- leveling system
+- More analytics
 
 
 
