@@ -19,13 +19,14 @@ class QuestsController < ApplicationController
 
     def create
         # byebug
-        @quest = Quest.new(user_id: session[:user_id], rick_id: quest_params[:rick_id], morty_id: quest_params[:morty_id], adventure_id: quest_params[:adventure_id], success: false)
-        
+        @quest = Quest.new(user_id: session[:user_id], rick_id: quest_params[:rick_id], morty_id: quest_params[:morty_id], adventure_id: quest_params[:adventure_id], success: false, rick_alive: false, morty_alive: false, quest_total:0)
+        @quest.success = @quest.key_item(quest_params[:item_ids], @quest.adventure_id)
+        @quest.success_rate(quest_params[:item_ids])
+
         if quest_params[:item_ids].length > 3 
             redirect_to "/quests/new"
             return
         end
-
         @quest.save
         
         quest_params[:item_ids].each do |item|
@@ -38,6 +39,9 @@ class QuestsController < ApplicationController
             redirect_to "/quests/new"
         end
     end
+
+    
+
 
     private
 
