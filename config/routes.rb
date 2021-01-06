@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   root 'application#hello'
   resources :login, only: [:new, :create]
 
-  
+  get '/analytics' => 'analytics#index', as: 'analytics'
+  get '/user_analytics' => 'analytics#show', as: 'user_analytics'
+
+  get '/logout', to: 'login#destroy', as: 'logout'
 end

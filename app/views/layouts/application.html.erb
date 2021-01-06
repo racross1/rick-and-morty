@@ -65,8 +65,17 @@
           </div>
         </li>
         <% if session[:user_id] %>
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Logout</a>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+            Analytics
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/analytics">All Analytics</a>
+            <a class="dropdown-item" href="/user_analytics">Your Analytics</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" data-method="delete" href="/logout">Logout</a>
           </li>
         <% else %>
         <li class="nav-item active">
@@ -80,6 +89,9 @@
     </nav>
     <br><br><br>
     <div class="background">
+    <div class="alert alert-danger">
+      <strong><%= flash[:errors] %></strong>
+    </div>
       <div class="centered">
         <%= yield %>
       </div>

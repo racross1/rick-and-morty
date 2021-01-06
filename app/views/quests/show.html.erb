@@ -10,3 +10,11 @@ Outcome: <% if @quest.success %>
             <% else %> 
                 <%= @quest.adventure.fail%>
             <% end %><br><br>
+Rick Alive? <%= @quest.rick_alive %><br>
+Morty Alive? <%= @quest.morty_alive %><br>
+Quest Score: <%= @quest.quest_total %><br>
+        <%if @quest.user_id == session[:user_id]%>
+        Items: <ul><% @quest.items.each do |i| %>
+                <li><%= i.name %></li>
+            <% end %></ul><br>
+        <% end %>

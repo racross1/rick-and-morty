@@ -18,9 +18,9 @@ i4 = Item.create(name: "microverse battery", success_rate: 4)
 i5 = Item.create(name: "plumbus", success_rate: 3)
 i6 = Item.create(name: "eyeholes", success_rate: 1 )
 
-Adventure.create(name: "You S.O.B I'm in", location: "dimension c-137", description: "biggest hiest in the dimension broh", pass: "succesful heist", fail: "failed heist", item: i1.id)
-Adventure.create(name: "Get Those Crystals", location: "dimension c-137", description: "Find the crystals and get out", pass: "found crystals", fail: "you died broh", item: i2.id)
-Adventure.create(name: "Show Us What U Got!", location: "dimension c-137", description: "Save the planet from the talking heads in the sky by coming up with a song", pass: "got schwifty", fail: "you died broh", item: i1.id)
+Adventure.create(name: "You S.O.B I'm in", location: "dimension c-137", description: "biggest hiest in the dimension broh", pass: "succesful heist", fail: "failed heist", item: i1)
+Adventure.create(name: "Get Those Crystals", location: "dimension c-137", description: "Find the crystals and get out", pass: "found crystals", fail: "you died broh", item: i2)
+Adventure.create(name: "Show Us What U Got!", location: "dimension c-137", description: "Save the planet from the talking heads in the sky by coming up with a song", pass: "got schwifty", fail: "you died broh", item: i1)
 
 Rick.create(name: "Pickle Rick", attitude: "Insane", species: "pickle")
 Rick.create(name: "Fascist Wasp Rick", attitude: "Kind", species: "Wasp")

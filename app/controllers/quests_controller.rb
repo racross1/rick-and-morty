@@ -2,7 +2,8 @@ class QuestsController < ApplicationController
     
     def index
         @user_quests = User.find(session[:user_id]).quests
-        @quests = Quest.all
+        @quests = Quest.correct_order
+
     end
     
     def show
@@ -34,7 +35,7 @@ class QuestsController < ApplicationController
         end
         
         if @quest.valid?
-            redirect_to quests_path
+            redirect_to @quest
         else
             redirect_to "/quests/new"
         end
