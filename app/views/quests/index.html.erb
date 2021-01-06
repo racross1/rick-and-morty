@@ -10,6 +10,9 @@
             <% else %> 
                 <%= q.adventure.fail%>
             <% end %><br>
+    Rick Alive? <%= q.rick_alive %><br>
+    Morty Alive? <%= q.morty_alive %><br>
+    Quest Score: <%= q.quest_total %><br>
     Items: <ul><% q.items.each do |i| %>
                 <li><%= i.name %></li>
             <% end %></ul><br>

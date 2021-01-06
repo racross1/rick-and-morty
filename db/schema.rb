@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_191027) do
+ActiveRecord::Schema.define(version: 2021_01_06_003232) do
 
   create_table "adventures", force: :cascade do |t|
     t.string "location"
@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 2021_01_05_191027) do
     t.boolean "success"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "rick_alive"
+    t.boolean "morty_alive"
+    t.integer "quest_total"
     t.index ["adventure_id"], name: "index_quests_on_adventure_id"
     t.index ["morty_id"], name: "index_quests_on_morty_id"
     t.index ["rick_id"], name: "index_quests_on_rick_id"
