@@ -1,12 +1,5 @@
 <h1> Make a new Rick </h1> 
 
-<% if flash[:errors] %> 
-    <% flash[:errors].each do |error| %>
-        <p> <%= error %> </p>
-    <% end %>
-<% end %>
-
-
 <%= form_with model: @rick do |f| %> 
     <%= f.label :name %>
     <%= f.text_field :name %><br>

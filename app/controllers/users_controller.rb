@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    skip_before_action :require_login,  :only => [:create, :new]
+
     def index
     end 
 
@@ -8,7 +10,8 @@ class UsersController < ApplicationController
 
     def create
         if user_params[:password] != user_params[:password_confirmation]
-            redirect_to 'new_user_path '
+            flash[:errors] = ["Passwords must match"]
+            redirect_to new_user_path
         else 
             @user = User.create(user_params)
             if @user.valid? 

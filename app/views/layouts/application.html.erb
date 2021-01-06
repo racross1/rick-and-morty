@@ -89,9 +89,14 @@
     </nav>
     <br><br><br>
     <div class="background">
-    <div class="alert alert-danger">
-      <strong><%= flash[:errors] %></strong>
-    </div>
+    <%if flash[:errors] %>
+      <div class="alert alert-danger">
+      <% flash[:errors].each do |error| %>
+        <strong> <%= error %> </strong>
+    <% end %>
+
+      </div>
+      <%end%>
       <div class="centered">
         <%= yield %>
       </div>

@@ -1,11 +1,5 @@
 <h1> Make a new Morty </h1> 
 
-<% if flash[:errors] %> 
-    <% flash[:errors].each do |error| %>
-        <p> <%= error %> </p>
-    <% end %>
-<% end %>
-
 <%= form_with model: @morty do |f| %> 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
