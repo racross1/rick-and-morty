@@ -1,4 +1,7 @@
-<h1> Morty's </h1>
+<h3 style="color:white;"> List of all Morty's </h3>
+<br>
+<ul>
 <% @morties.each do |m| %> 
-    <%=link_to m.name, m %><br>
+    <li><%=link_to m.name, m %></li>
 <% end %> 
+</ul>

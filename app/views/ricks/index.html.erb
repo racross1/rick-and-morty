@@ -1,5 +1,8 @@
-<h1> Ricks </h1>
+<h3 style="color:white;">List of all Ricks</h3>
+<br>
+<ul>
 <% @ricks.each do |r| %> 
-    <%=link_to r.name, r %><br>
+    <li><%=link_to r.name, r %></li>
 <% end %> 
+</ul>
 
