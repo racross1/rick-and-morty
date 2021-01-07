@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :items, only: [:new, :create, :show, :index]
   resources :morties, only: [:new, :create, :show, :index]
   resources :ricks, only: [:new, :create, :show, :index]
-  resources :users, only: [:new, :create, :index]
+  resources :users, only: [:new, :create]
 
   root 'application#hello'
   resources :login, only: [:new, :create]

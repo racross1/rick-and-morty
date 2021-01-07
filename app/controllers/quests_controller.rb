@@ -36,6 +36,8 @@ class QuestsController < ApplicationController
         end
         
         if @quest.valid?
+            @user = User.find(session[:user_id])
+            @user.update_level
             redirect_to @quest
         else
             redirect_to "/quests/new"

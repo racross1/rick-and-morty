@@ -1,4 +1,4 @@
-<h3> Your Quest Stats </h3>
+<h3> <%= @user.username %> Quest Stats </h3>
 
 <p>Total number of quests: <%= @quests.count%> </p>
 <p>Quests Completed: <%= @user.completed_quests%> </p>
@@ -17,7 +17,10 @@
 <p>Total Possible Success Score: <%= @user.best_success_score%> </p> 
 <p>Quest Success Score Percentage: <%= @user.quest_percentage%> </p> 
 
+<h3><%= @user.username %> stats </h3>
 
+<p> Level: <%= @level %></p>
+<p style="color:red;"> <%= @message %> </p>
 
 
 
