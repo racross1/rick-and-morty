@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/user_analytics' => 'analytics#show', as: 'user_analytics'
 
   get '/logout', to: 'login#destroy', as: 'logout'
+
+  get '/rankings', to: 'analytics#rankings', as: 'rankings'
 end

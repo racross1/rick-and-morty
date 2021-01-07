@@ -1,0 +1,15 @@
+<h3 style='color:white;'> User Rankings </h3>
+<br>
+<%i=0%>
+<%@users.each do |u|%>
+<strong style="color:white;"><%=i+=1%>.</strong> <strong>Username:</strong> <%= u.username %>
+<%if u.id == @current_user_id%> <strong style="color:red;"><%=u.user_arrow%></strong>
+<%end%>
+<br>
+&nbsp;&nbsp;&nbsp; <strong>Level:</strong> <%=u.level%><br>
+&nbsp;&nbsp;&nbsp; <strong>Quests Success Score:</strong> <%=u.quests_total_score%><br>
+&nbsp;&nbsp;&nbsp; <strong>Quests Success Percentage:</strong> <%=u.quest_percentage%><br>
+&nbsp;&nbsp;&nbsp; <strong>Percent Ricks Killed:</strong> <%=u.percent_ricks_killed%><br>
+&nbsp;&nbsp;&nbsp; <strong>Percent Morties Killed:</strong> <%=u.percent_morties_killed%><br>
+<br><br>  
+<% end %>

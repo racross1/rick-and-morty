@@ -55,4 +55,28 @@ class User < ApplicationRecord
         self.update(level: new_level)
     end
     
+    def self.ranked_users 
+        User.all.sort_by{|user| user.quests_total_score}.reverse 
+    end 
+
+    def self.top_score_user 
+       User.ranked_users.first
+    end 
+
+    def self.bottom_score_user 
+        User.ranked_users.last   
+    end 
+
+    def user_arrow
+        user_arrow = ""
+        if self == User.top_score_user 
+            user_arrow = "<< You're in first! Don't mess this up, broh."
+        elsif self == User.bottom_score_user
+            user_arrow = "<< You're in last place! You're basically Jerry."
+        else 
+            user_arrow = "<< This is you. Why aren't you winning??"
+        end 
+    end 
+
+
 end

@@ -17,6 +17,16 @@ class AnalyticsController < ApplicationController
         end
     end 
 
+    def rankings
+        # @users = User.all
+        @users = User.ranked_users
+        @current_user_id = session[:user_id]
+        @winning_user = User.top_score_user
+    end
+
+    
+
+
 end 
 
 
