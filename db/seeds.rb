@@ -5,18 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Item.destroy_all
-Adventure.destroy_all
-Quest.destroy_all 
-Rick.destroy_all 
-Morty.destroy_all
+# Item.destroy_all
+# Adventure.destroy_all
+# Quest.destroy_all 
+# Rick.destroy_all 
+# Morty.destroy_all
 
 i1 = Item.create(name: "Meseeks Box", success_rate: 2)
 i2 = Item.create(name: "Portal Gun", success_rate: 4)
-i3 = Item.create(name: "Morty's Spellbook", success_rate: 0)
+i3 = Item.create(name: "Morty's Spellbook", success_rate: -1)
 i4 = Item.create(name: "Microverse Battery", success_rate: 4)
 i5 = Item.create(name: "Plumbus", success_rate: 3)
-i6 = Item.create(name: "Eyeholes", success_rate: 1 )
+i6 = Item.create(name: "Eyeholes", success_rate: 1)
+i7 = Item.create(name: "Dream Inceptor", success_rate: 2)
+i8 = Item.create(name: "Series 9000 Brainalyzer", success_rate: 1)
+i9 = Item.create(name: "Ionic Defibulizer", success_rate: -2)
+i10 = Item.create(name: "Courier Flap", success_rate: 0)
+i11 = Item.create(name: "Broken Leg Serum", success_rate: 0)
+i12 = Item.create(name: "Interdimensional Goggles", success_rate: 1)
+i13 = Item.create(name: "Time Stabilizing Collar", success_rate: 2)
+i14 = Item.create(name: "Combat Suit", success_rate: 3)
+i15 = Item.create(name: "Cognition Amplifier", success_rate: 2)
+i16 = Item.create(name: "Space Cruiser", success_rate: 3)
+i17 = Item.create(name: "Butter Robot", success_rate: 3)
+i18 = Item.create(name: "Gwendolyn", success_rate: 1)
+i19 = Item.create(name: "Schmeckel", success_rate: 2)
 
 Adventure.create(name: "You S.O.B I'm in", location: "Dimension C-137", description: "Plan the biggest hiest in the dimension broh. This is not a joke and it will get wild.", pass: "The heist was successful broh.", fail: "Broh how do you fail the biggest heist in the dimension.", item: i1)
 Adventure.create(name: "Edge of Tomorty", location: "Dimension L-472", description: "Rick and Morty are searching for Death Crystals. We need to gather them before they end up in the wrong hands.", pass: "Crystals were gathered successfully.", fail: "The Death Crystals fell into the wrong hands.", item: i2)

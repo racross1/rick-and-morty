@@ -8,9 +8,15 @@
 
     <%= f.label :adventure%>
     <%= f.collection_select :adventure_id, @adventures, :id, :name %><br><br>
-
-    <%= f.label :item%> (limit 3)
-    <%= f.collection_check_boxes :item_ids, @items, :id, :name, include_hidden:false %><br><br>
+    
+    <div class="form-group">
+    <%= f.label :item, class: "checkbox-inline"%> (limit 3)
+    <div class="col-sm-8">
+    <%= f.collection_check_boxes :item_ids, @items, :id, :name, include_hidden:false %>
+        </div>
+    </div>
+    
+    <br><br>
 
     <%= f.submit %>
 <% end %>
