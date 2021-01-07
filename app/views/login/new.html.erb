@@ -1,11 +1,11 @@
-<h2> Hi Login! </h1>
+<h2 style="color:white;"> Hi Login! </h2>
 
 <%= form_for :log_in, url: login_index_path do |f|%>
     <%= f.label :username %>
-    <%= f.text_field :username %>
+    <%= f.text_field :username %><br>
 
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password %><br>
 
     <%= f.submit %>
 

@@ -1,26 +1,32 @@
-<h3>Your Quests: </h3>
+<h3 style="color:white;">Your Quests:</h3>
+<br>
+<%i = 0%>
 <% @user_quests.each do |q|%>
-    Adventure Name: <%= link_to q.adventure.name, q %><br>
-    Adventure Location: <%= q.adventure.location %><br>
-    Adventure Description: <%= q.adventure.description %><br>
-    Rick: <%= q.rick.name%><br>
-    Morty: <%= q.morty.name%><br>
-    Quest Score: <%= q.quest_total %><br>
-    Items: <ul><% q.items.each do |i| %>
+    <strong style="color:white;">(<%=i+=1%>)</strong><br>
+    <strong>Adventure Name:</strong> <%= link_to q.adventure.name, q %><br>
+    <strong>Adventure Location:</strong> <%= q.adventure.location %><br>
+    <strong>Adventure Description:</strong> <%= q.adventure.description %><br>
+    <strong>Rick:</strong> <%= q.rick.name%><br>
+    <strong>Morty:</strong> <%= q.morty.name%><br>
+    <strong>Quest Score:</strong> <%= q.quest_total %><br><br>
+    <strong>Items:</strong> <ul><% q.items.each do |i| %>
                 <li><%= i.name %></li>
             <% end %></ul>
-   <strong style="color:red;">Outcome: <%= q.outcome_message %></strong><br><br><br>
+   <strong>Outcome:</strong> <strong style="color:red;"><%= q.outcome_message %></strong><br><br><br>
 <% end %>
-
-<h3> All quests: </h3>
-
+<br>
+<br>
+<br>
+<br>
+<h3 style="color:white;"> All Quests: </h3>
+<br>
 <% @quests.each do |q|%>
-    Adventure Name: <%= link_to q.adventure.name, q %><br>
-    Adventure Location: <%= q.adventure.location %><br>
-    Adventure Description: <%= q.adventure.description %><br>
-    Rick: <%= q.rick.name%><br>
-    Morty: <%= q.morty.name%><br>
-    Outcome: <% if q.success %>
+    <strong>Adventure Name:</strong> <%= link_to q.adventure.name, q %><br>
+    <strong>Adventure Location:</strong> <%= q.adventure.location %><br>
+    <strong>Adventure Description:</strong> <%= q.adventure.description %><br>
+    <strong>Rick:</strong> <%= q.rick.name%><br>
+    <strong>Morty:</strong> <%= q.morty.name%><br>
+    <strong>Outcome:</strong> <% if q.success %>
                 <%= q.adventure.pass %>
             <% else %> 
                 <%= q.adventure.fail%>

@@ -1,21 +1,19 @@
-<h3> <%= @user.username %> Quest Stats </h3>
+<h3 style="color:white;"> Your Quest Stats </h3>
+<br>
+<strong>Total number of quests:</strong> <%= @quests.count%><br>
+<strong>Quests Completed:</strong> <%= @user.completed_quests%><br>
+<strong>Quests Failed:</strong> <%= @user.failed_quests%><br><br>
 
-<p>Total number of quests: <%= @quests.count%> </p>
-<p>Quests Completed: <%= @user.completed_quests%> </p>
-<p>Quests Failed: <%= @user.failed_quests%> </p>
+<strong>Different Ricks Used: </strong> <%=@user.total_ricks_used%><br>
+<strong>Different Morty's Used: </strong> <%=@user.total_morties_used%><br>
+<strong>Ricks Killed: </strong> <%= @user.ricks_killed%><br>
+<strong>Morty's Killed: </strong> <%= @user.morties_killed%><br> 
+<strong>Percent Ricks Killed: </strong> <%=@user.percent_ricks_killed%><br>
+<strong>Percent Morty's Killed: </strong> <%=@user.percent_morties_killed%><br><br> 
 
-<p>Total Ricks Used: <%=@user.total_ricks_used%> </p>
-<p>Total Morty's Used: <%=@user.total_morties_used%> </p>
-
-<p>Ricks Killed: <%= @user.ricks_killed%> </p>
-<p>Morty's Killed: <%= @user.morties_killed%> </p> 
-
-<p>Percent Ricks Killed: <%=@user.percent_ricks_killed%> </p>
-<p>Percent Morty's Killed: <%=@user.percent_morties_killed%> </p> 
-
-<p>Quests Total Success Score: <%= @user.quests_total_score%> </p> 
-<p>Total Possible Success Score: <%= @user.best_success_score%> </p> 
-<p>Quest Success Score Percentage: <%= @user.quest_percentage%> </p> 
+<strong>Quests Total Success Score: </strong> <%= @user.quests_total_score%><br>
+<strong>Total Possible Success Score: </strong> <%= @user.best_success_score%><br> 
+<strong>Quest Success Score Percentage: </strong> <%= @user.quest_percentage%><br> 
 
 <h3><%= @user.username %> stats </h3>
 

@@ -1,18 +1,18 @@
-<h3> All Quest Stats </h3>
+<h3 style="color:white;"> All Quest Stats </h3>
+<br>
+<strong>Total number of quests: </strong><%=Quest.total_num_quests%><br>
 
-<p>Total number of quests: <%=Quest.total_num_quests%> </p>
-<p>Quests Completed: <%=Quest.quests_completed%> </p>
-<p>Quests Failed: <%= Quest.failed_quests%> </p>
+<strong>Quests Completed: </strong><%=Quest.quests_completed%><br>
 
-<p>Total Ricks Used: <%=Quest.total_ricks_used%> </p>
-<p>Total Morty's Used: <%=Quest.total_morties_used%> </p>
+<strong>Quests Failed: </strong><%= Quest.failed_quests%><br><br>
 
-<p>Ricks Killed: <%=Quest.ricks_killed %> </p>
-<p>Morty's Killed: <%=Quest.morties_killed%> </p> 
+<strong>Different Ricks Used: </strong> <%=Quest.total_ricks_used%><br>
+<strong>Different Morty's Used: </strong> <%=Quest.total_morties_used%><br>
+<strong>Ricks Killed: </strong> <%=Quest.ricks_killed %><br>
+<strong>Morty's Killed: </strong> <%=Quest.morties_killed%><br> 
+<strong>Percent Ricks Killed: </strong> <%=Quest.percent_ricks_killed%><br>
+<strong>Percent Morty's Killed: </strong> <%=Quest.percent_morties_killed%><br><br> 
 
-<p>Percent Ricks Killed: <%=Quest.percent_ricks_killed%> </p>
-<p>Percent Morty's Killed: <%=Quest.percent_morties_killed%> </p> 
-
-<p>Quests Total Success Score: <%=Quest.quests_total_score%> </p> 
-<p>Total Possible Success Score: <%=Quest.best_success_score%> </p> 
-<p>Quest Success Score Percentage: <%=Quest.quest_percentage%> </p> 
+<strong>Quests Total Success Score: </strong> <%=Quest.quests_total_score%><br> 
+<strong>Total Possible Success Score: </strong> <%=Quest.best_success_score%><br> 
+<strong>Quest Success Score Percentage: </strong> <%=Quest.quest_percentage%><br>

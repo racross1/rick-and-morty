@@ -1,16 +1,16 @@
-<h3> Your Quest </h3>
+<h3 style="color:white;"> Your Quest </h3>
 <br>
-Adventure Name: <%= @quest.adventure.name%><br>
-Adventure Location: <%= @quest.adventure.location %><br>
-Adventure Description: <%= @quest.adventure.description %><br><br>
-Rick: <%= @quest.rick.name%><br>
-Morty: <%= @quest.morty.name%><br>
+<strong>Adventure Name:</strong> <%= @quest.adventure.name%><br>
+<strong>Adventure Location:</strong> <%= @quest.adventure.location %><br>
+<strong>Adventure Description:</strong> <%= @quest.adventure.description %><br><br>
+<strong>Rick:</strong> <%= @quest.rick.name%><br>
+<strong>Morty:</strong> <%= @quest.morty.name%><br>
 
-Rick Alive? <%= @quest.rick_alive %><br>
-Morty Alive? <%= @quest.morty_alive %><br><br>
-Quest Score: <%= @quest.quest_total %><br><br>
+<strong>Rick Alive?</strong> <%= @quest.rick_alive %><br>
+<strong>Morty Alive?</strong> <%= @quest.morty_alive %><br><br>
+<strong>Quest Score:</strong> <%= @quest.quest_total %><br><br>
         <%if @quest.user_id == session[:user_id]%>
-        Items: <ul><% @quest.items.each do |i| %>
+        <strong>Items:</strong> <ul><% @quest.items.each do |i| %>
                 <li><%= i.name %></li>
             <% end %></ul><br><br>
         <% end %>

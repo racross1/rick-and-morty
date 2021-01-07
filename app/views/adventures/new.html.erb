@@ -1,5 +1,5 @@
-<h3>Create your own Adventure!! </h3>
-
+<h3 style="color:white;">Create your own Adventure!! </h3>
+<br>
 <%= form_for @adventure do |f| %>   
     <%= f.label :name %>
     <%= f.text_field :name %><br><br>
@@ -10,12 +10,13 @@
     <%= f.label :description %>
     <%= f.text_area :description %><br><br>
 
-    <%= f.label :pass %>
+    <%= f.label :pass_message %>
     <%= f.text_field :pass %><br><br>
 
-    <%= f.label :fail %>
+    <%= f.label :fail_message %>
     <%= f.text_field :fail %><br><br>
 
+    Key item 
     <%= f.collection_select :item_id, @items, :id, :name%><br><br>
 
     <%= f.submit%>

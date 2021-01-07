@@ -1,8 +1,9 @@
-<h3>List of all Adventures:</h3>
+<h3 style="color:white;">List of all Adventures:</h3>
+<br>
 <ul>
 <% @adventures.each do |adventure| %>
-    <li>Name: <%= link_to adventure.name, adventure%></li>
-    <li>Location: <%= adventure.location%> </li>
-    <li>Description: <%= adventure.description %> </li>
+    <li><strong>Name:</strong> <%= link_to adventure.name, adventure%></li>
+    <li><strong>Location:</strong> <%= adventure.location%> </li>
+    <li><strong>Description:</strong> <%= adventure.description %> </li><br>
 <% end %>
 </ul>
