@@ -32,3 +32,10 @@
   background-size: cover;
  }
 
+img {
+    display: block;
+    max-width:800px;
+    max-height:500px;
+    width: auto;
+    height: auto;
+}

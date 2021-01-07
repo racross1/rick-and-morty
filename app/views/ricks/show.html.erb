@@ -1,5 +1,9 @@
-<h1 style="color:white;"> <%= @rick.name %> </h1>
+<div class="card" style="background:transparent;">
+    <img class="card-img-top" src="<%= @rick.img %>">
+    <div class="card-body">
+        <h1 class="card-title" style="color:white;"> <%= @rick.name %> </h1>
 
-<h3>Attitude: <%= @rick.attitude %></h3>
-<h3>Species: <%= @rick.species %></h3>
-
+        <h3>Attitude: <%= @rick.attitude %></h3>
+        <h3>Species: <%= @rick.species %></h3>
+    </div>
+</div>
