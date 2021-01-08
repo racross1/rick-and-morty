@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_07_232344) do
+ActiveRecord::Schema.define(version: 2021_01_08_001406) do
 
   create_table "adventures", force: :cascade do |t|
     t.string "location"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_01_07_232344) do
     t.integer "success_rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img"
   end
 
   create_table "morties", force: :cascade do |t|
