@@ -1,14 +1,15 @@
 class QuestsController < ApplicationController
     
     def index
-        @user_quests = User.find(session[:user_id]).quests.reverse
-        @quests = Quest.all
-        
-
+        @user_quests = User.find(session[:user_id]).quests.reverse        
     end
     
     def show
         @quest = Quest.find(params[:id])
+    end
+
+    def all
+        @quests = Quest.all
     end
 
     def new

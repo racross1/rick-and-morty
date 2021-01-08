@@ -14,22 +14,3 @@
             <% end %></ul>
    <strong>Outcome:</strong> <strong style="color:red;"><%= q.outcome_message %></strong><br><br><br>
 <% end %>
-<br>
-<br>
-<br>
-<br>
-<h3 style="color:white;"> All Quests: </h3>
-<br>
-<% @quests.each do |q|%>
-    <strong>Adventure Name:</strong> <%= link_to q.adventure.name, q %><br>
-    <strong>Adventure Location:</strong> <%= q.adventure.location %><br>
-    <strong>Adventure Description:</strong> <%= q.adventure.description %><br>
-    <strong>Rick:</strong> <%= q.rick.name%><br>
-    <strong>Morty:</strong> <%= q.morty.name%><br>
-    <strong>Outcome:</strong> <% if q.success %>
-                <%= q.adventure.pass %>
-            <% else %> 
-                <%= q.adventure.fail%>
-            <% end %><br><br>
-
-<% end %>
