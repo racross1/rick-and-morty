@@ -1,63 +1,27 @@
-# README
+# Rick and Morty's Quests README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+This application is based on the TV Show Rick and Morty. In this application once you create a user you are able to 
+set up your own quests for Rick and Morty to adventure on. Based off the adventure of the quest and the quest items 
+you choose, you will either succeed or fail. You can also Kill your Rick and Morty if the adventure goes south.
 
-Things you may want to cover:
+### Features
+* Create an account
+* Go on a quest
+* Check your quest analytics
+* Check all quest analytics
+* Check your account rank
+* Create a Rick
+* Create a Morty
+* Create an Adventure
+* Create an item
 
-* Ruby version
+### Requirements
+* Ruby 2.6.1
+* Rails 6.1.0
+* sqlite3 1.4
+* all other requirements will need a 'bundle install' command in the repository after cloning.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-To Do
-- update formatting on analytics page
-
-Later
-- Seed thoughtfully
-- Try to break it / debug
-
-Stretch
-- leveling system
-- More analytics
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-success v failure
-Surival (true / false)
-quest_total %
-total ricks used
-total morties used 
-
-all of the above for
-current_user
-each other user
-all users
-
-end
+### Developers
+* [Lucas Montanari](https://github.com/Lmontanari20)
+* [Rachel Cross](https://github.com/racross1)
