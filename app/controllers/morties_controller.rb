@@ -24,7 +24,7 @@ class MortiesController < ApplicationController
     private 
 
     def morty_params 
-        params.require(:morty).permit(:name, :attitude, :species)
+        params.require(:morty).permit(:name, :attitude, :species, :img)
     end
 
 end

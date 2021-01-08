@@ -24,7 +24,7 @@ class RicksController < ApplicationController
     private 
 
     def rick_params 
-        params.require(:rick).permit(:name, :attitude, :species)
+        params.require(:rick).permit(:name, :attitude, :species, :img)
     end
 
 end
